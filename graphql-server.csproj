@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,6 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\characters.csv" />
+    <None Remove="Data\planets.csv" />
+    <None Remove="Data\species.csv" />
+    <None Remove="Data\starships.csv" />
+    <None Remove="Data\vehicles.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\characters.csv" />
+    <Content Include="Data\planets.csv" />
+    <Content Include="Data\species.csv" />
+    <Content Include="Data\starships.csv" />
+    <Content Include="Data\vehicles.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="GraphQL.MicrosoftDI" Version="7.*" />
+    <PackageReference Include="GraphQL.Server.All" Version="7.*" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
